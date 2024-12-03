@@ -1,70 +1,39 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 📝 소개
 
-In the project directory, you can run:
+연차를 신청하고 신청한 연차 내역들을 조회할 수 있는 홈페이지를 제작
 
-### `npm start`
+해당 홈페이지는 아마존 웹 서비스에서 제공하는 클라우드(AWS EC2)를 통해 연결되어있으며,
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+http://15.164.178.74:3200/ 로 접속하여 확인하실 수 있습니다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+테스트를 위한 로그인 계정은 최하단에 작성하겠습니다.
 
-### `npm test`
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 주요 기능
 
-### `npm run build`
+1. 로그인 기능
+   - REACT의 상태관리 HOOK중 하나인 useState를 통해 로그인 인증 방식
+   - REACT의 상태관리 HOOK중 하나인 useEffect를 통해 로그인 성공 시 useState로 설정했던 로그인 인증 방식을 true로 변경
+   - 세션스토리지를 통해 로그인 정보를 세션에 저장하며, 저장된 정보에 따라 useState를 통해 true와 false로 변경하면서 useEffect를 통해 리다이렉트 기능도함
+     
+2. 연차 신청
+   - 세션스토리지에 저장되어 있던 로그인 정보를 axios로 들고와서 화면에 표시
+   - 연차 신청 버튼 클릭 시 작성된 내용들을 서버로 POST 요청을 통해 테이블에 저장
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. 연차 조회
+   - 세션스토리지에 저장되어 있던 로그인 정보를 axios로 들고와서 화면에 표시
+   - 테이블에 저장된 값을 들고와서 목록으로 화면에 표시
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+ #. 기타
+   - 차후 추가로 관리자(팀장 또는 직급자) 계정으로 신청한 연차 정보들을 볼수있고 반려하거나 승인할 수 있는 기능 추가 예정
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 테스트 아이디
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+아이디 : 이동훈1
+비밀번호 : 1
