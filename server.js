@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3001;
+const port = 3100;
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const path = require('path');
@@ -10,7 +10,7 @@ require('dotenv').config();
 const cors = require('cors');
 
 app.use(cors({
-    origin: 'http://localhost:3000', // React 주소 (React가 3000번 포트에서 실행)
+    origin: 'http://localhost:3200', // React 주소 (React가 3200번 포트에서 실행)
     credentials: true,  // 쿠키를 전송 설정
 }));
 
@@ -66,6 +66,9 @@ async function startServer() {
 
   const leaveRouter = require('./src/Back/leaveRouter');
   app.use('/leave_app', leaveRouter(connection));
+
+  const leaveSrcRouter = require('./src/Back/leaveSrcRouter');
+  app.use('/leave_src', leaveSrcRouter(connection));
 
   const sessionRouter = require('./src/Back/sessionRouter');
   app.use('/session', sessionRouter(connection));

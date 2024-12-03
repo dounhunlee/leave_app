@@ -19,7 +19,7 @@ const Login = ({setAuthenticate}) => {
     e.preventDefault();
 
     try {
-        const response = await axios.post('http://localhost:3001/login', { id, pwd }, { withCredentials: true });
+        const response = await axios.post('http://localhost:3100/login', { id, pwd }, { withCredentials: true });
         console.log(response.data.message)
         if (response.data.message === '로그인 성공') {
           sessionStorage.setItem('isAuthenticated', 'true');

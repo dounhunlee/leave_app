@@ -7,6 +7,7 @@ import Home from './page/Home';
 import LeaveApplication from './page/LeaveApplication';
 import { Route, Routes } from 'react-router-dom';
 import PrivateRoute from './route/PrivateRoute';
+import LeaveSearch from './page/LeaveSearch';
 
 function App() {
   const[authenticate,setAuthenticate]=useState(false) 
@@ -29,6 +30,10 @@ function App() {
         <Route path='/leave_app' element={            
           <PrivateRoute authenticate={authenticate}>
             <LeaveApplication />
+          </PrivateRoute>}/> 
+        <Route path='/leave_src' element={            
+          <PrivateRoute authenticate={authenticate}>
+            <LeaveSearch />
           </PrivateRoute>}/> 
         <Route path='/login' element={<Login setAuthenticate={setAuthenticate} />} /> 
         

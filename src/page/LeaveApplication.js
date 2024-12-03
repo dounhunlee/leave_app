@@ -9,7 +9,7 @@ const LeaveApplication = () => {
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/session', { withCredentials: true });
+        const response = await axios.get('http://localhost:3100/session', { withCredentials: true });
         setUserInfo(response.data);
        
       } catch (error) {
@@ -29,7 +29,7 @@ const LeaveApplication = () => {
   
     try {
       const response = await axios.post(
-        'http://localhost:3001/leave_app',
+        'http://localhost:3100/leave_app',
         {
           emp_id: userInfo?.emp_id, 
           start_date: startDate,

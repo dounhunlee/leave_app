@@ -23,14 +23,14 @@ function NavLayout({ authenticate, setAuthenticate }) {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <NavDropdown title="연차관리" id="basic-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/leave_app">
-              연차 신청
-            </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/b">
-              연차 조회
-            </NavDropdown.Item>
-          </NavDropdown>
+    
+        <Nav.Link as={Link} to="/leave_app">
+          연차 신청
+        </Nav.Link>
+        
+        <Nav.Link as={Link} to="/leave_src">
+          연차 조회
+        </Nav.Link>
           {/* <NavDropdown title="업무일지" id="basic-nav-dropdown">
             <NavDropdown.Item as={Link} to="/c">
               업무일지 작성

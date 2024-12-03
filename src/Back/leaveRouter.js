@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 module.exports = (connection) => {
-  // 연차 신청 API
+
+
+
+  
   router.post('/', async (req, res) => {
     const { emp_id, start_date, end_date, reason } = req.body; // 클라이언트에서 전달된 데이터
     const request_date = new Date().toISOString().split('T')[0]; // 현재 날짜를 YYYY-MM-DD 형식으로 저장
